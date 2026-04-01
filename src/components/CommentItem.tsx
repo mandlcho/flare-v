@@ -30,7 +30,7 @@ export default function CommentItem({ comment, onSeek, onDelete, isOwn }: Props)
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2">
-          <span className="text-base font-black uppercase tracking-wider text-white">{comment.author.name}</span>
+          <span className="text-base font-black tracking-wider text-white">{comment.author.name}</span>
           <button
             onClick={() => onSeek(comment.timestamp)}
             className="border border-zinc-700 px-1.5 py-0.5 text-base font-mono font-bold text-orange-300 hover:border-orange-300 hover:bg-orange-300/10 transition-colors"
@@ -38,7 +38,7 @@ export default function CommentItem({ comment, onSeek, onDelete, isOwn }: Props)
             {formatTime(comment.timestamp)}
           </button>
           {comment.annotationId && (
-            <span className="text-base font-bold uppercase tracking-wider text-zinc-600">+ annotation</span>
+            <span className="text-base font-bold tracking-wider text-zinc-600">+ annotation</span>
           )}
         </div>
         <p className="mt-1 text-lg text-zinc-400 break-words font-mono">

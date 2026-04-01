@@ -155,8 +155,8 @@ function VideoWorkspace({ videoId }: { videoId: string }) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-black">
         <div className="text-center">
-          <p className="text-lg font-black uppercase tracking-widest text-zinc-500">Video not found</p>
-          <Link href="/" className="mt-4 inline-block text-base font-bold uppercase tracking-widest text-orange-300 border-b-2 border-orange-300 pb-0.5 hover:text-orange-300">
+          <p className="text-lg font-black tracking-widest text-zinc-500">Video not found</p>
+          <Link href="/" className="mt-4 inline-block text-base font-bold tracking-widest text-orange-300 border-b-2 border-orange-300 pb-0.5 hover:text-orange-300">
             Back to home
           </Link>
         </div>
@@ -176,7 +176,7 @@ function VideoWorkspace({ videoId }: { videoId: string }) {
               <path strokeLinecap="square" strokeLinejoin="miter" d="M15 19l-7-7 7-7" />
             </svg>
           </Link>
-          <h1 className="text-base font-black uppercase tracking-widest text-white truncate max-w-md">{video.name}</h1>
+          <h1 className="text-base font-black tracking-widest text-white truncate max-w-md">{video.name}</h1>
         </div>
         <div className="flex items-center gap-3">
           <ShareButton videoId={videoId} currentTime={currentTime} />

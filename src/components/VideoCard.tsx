@@ -27,8 +27,8 @@ export default function VideoCard({ video }: { video: Video }) {
           )}
         </div>
         <div className="p-3 border-t border-zinc-800">
-          <h3 className="text-base font-black uppercase tracking-wider text-white truncate">{video.name}</h3>
-          <div className="mt-1 flex items-center gap-3 text-base font-bold uppercase tracking-wider text-zinc-600">
+          <h3 className="text-base font-black tracking-wider text-white truncate">{video.name}</h3>
+          <div className="mt-1 flex items-center gap-3 text-base font-bold tracking-wider text-zinc-600">
             <span>{annotationCount} ann.</span>
             <span>{commentCount} cmt.</span>
           </div>

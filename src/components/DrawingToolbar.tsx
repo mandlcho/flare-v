@@ -70,14 +70,14 @@ export default function DrawingToolbar({
 
       <button
         onClick={onClear}
-        className="border border-zinc-700 px-3 py-1.5 text-base font-bold uppercase tracking-wider text-zinc-500 hover:border-red-500 hover:text-red-500 transition-colors"
+        className="border border-zinc-700 px-3 py-1.5 text-base font-bold tracking-wider text-zinc-500 hover:border-red-500 hover:text-red-500 transition-colors"
       >
         Clear
       </button>
       <button
         onClick={onSave}
         disabled={!hasDrawing}
-        className="border-2 border-orange-300 bg-orange-300 px-3 py-1.5 text-base font-black uppercase tracking-wider text-black hover:bg-orange-300 hover:border-orange-300 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+        className="border-2 border-orange-300 bg-orange-300 px-3 py-1.5 text-base font-black tracking-wider text-black hover:bg-orange-300 hover:border-orange-300 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
       >
         Save
       </button>

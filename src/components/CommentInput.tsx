@@ -84,7 +84,7 @@ export default function CommentInput({ users, currentUser, onSubmit }: Props) {
             <button
               key={user.id}
               onClick={() => insertMention(user)}
-              className={`w-full flex items-center gap-2 px-3 py-2 text-base font-bold uppercase tracking-wider text-left transition-colors ${
+              className={`w-full flex items-center gap-2 px-3 py-2 text-base font-bold tracking-wider text-left transition-colors ${
                 i === mentionIndex ? 'bg-orange-300 text-black' : 'text-zinc-300 hover:bg-zinc-900'
               }`}
             >
@@ -117,7 +117,7 @@ export default function CommentInput({ users, currentUser, onSubmit }: Props) {
             }
           }}
           disabled={!text.trim()}
-          className="border-2 border-orange-300 bg-orange-300 px-4 py-1.5 text-base font-black uppercase tracking-widest text-black hover:bg-orange-300 hover:border-orange-300 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+          className="border-2 border-orange-300 bg-orange-300 px-4 py-1.5 text-base font-black tracking-widest text-black hover:bg-orange-300 hover:border-orange-300 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >
           Post
         </button>

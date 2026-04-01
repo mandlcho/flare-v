@@ -47,13 +47,13 @@ export default function NotificationBell() {
       {open && (
         <div className="absolute right-0 top-full mt-2 w-80 border-2 border-orange-300 bg-black shadow-[4px_4px_0_#fdba74] z-50">
           <div className="flex items-center justify-between border-b-2 border-zinc-800 px-3 py-2">
-            <span className="text-base font-black uppercase tracking-widest text-orange-300">
+            <span className="text-base font-black tracking-widest text-orange-300">
               Notifications
             </span>
             {unreadCount > 0 && (
               <button
                 onClick={() => markAllNotificationsRead()}
-                className="text-base font-bold uppercase tracking-wider text-zinc-500 hover:text-orange-300 transition-colors"
+                className="text-base font-bold tracking-wider text-zinc-500 hover:text-orange-300 transition-colors"
               >
                 Mark all read
               </button>
@@ -61,7 +61,7 @@ export default function NotificationBell() {
           </div>
           <div className="max-h-64 overflow-y-auto">
             {myNotifications.length === 0 ? (
-              <div className="px-3 py-6 text-center text-base font-bold uppercase tracking-wider text-zinc-600">
+              <div className="px-3 py-6 text-center text-base font-bold tracking-wider text-zinc-600">
                 No notifications
               </div>
             ) : (
@@ -85,7 +85,7 @@ export default function NotificationBell() {
                       {n.fromUser.name[0]?.toUpperCase()}
                     </div>
                     <div className="min-w-0">
-                      <span className="text-base font-black uppercase tracking-wider text-white">
+                      <span className="text-base font-black tracking-wider text-white">
                         {n.fromUser.name}
                       </span>
                       <p className="text-base text-zinc-400 font-mono truncate mt-0.5">

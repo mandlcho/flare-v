@@ -21,7 +21,7 @@ function HomeContent() {
                 <path strokeLinecap="square" strokeLinejoin="miter" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
               </svg>
             </div>
-            <h1 className="text-xl font-black uppercase tracking-widest text-orange-300">Flare</h1>
+            <h1 className="text-xl font-black tracking-widest text-orange-300">Flare</h1>
           </div>
           {currentUser && (
             <div className="flex items-center gap-3">
@@ -33,7 +33,7 @@ function HomeContent() {
                 >
                   {currentUser.name[0]?.toUpperCase()}
                 </div>
-                <span className="text-base font-bold uppercase tracking-wider text-zinc-400">{currentUser.name}</span>
+                <span className="text-base font-bold tracking-wider text-zinc-400">{currentUser.name}</span>
               </div>
             </div>
           )}
@@ -45,7 +45,7 @@ function HomeContent() {
 
         {videos.length > 0 && (
           <div className="mt-8">
-            <h2 className="mb-4 text-lg font-black uppercase tracking-widest text-orange-300">Your Videos</h2>
+            <h2 className="mb-4 text-lg font-black tracking-widest text-orange-300">Your Videos</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {videos.map((video) => (
                 <VideoCard key={video.id} video={video} />

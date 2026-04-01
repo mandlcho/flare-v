@@ -138,21 +138,21 @@ export default function VideoUploader() {
         <svg className="mx-auto mb-4 h-12 w-12 text-orange-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="square" strokeLinejoin="miter" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
         </svg>
-        <p className="text-lg font-black uppercase tracking-widest text-zinc-300">Drop video or click to upload</p>
-        <p className="mt-2 text-base font-bold uppercase tracking-wider text-zinc-600">MP4 / WebM / MOV</p>
+        <p className="text-lg font-black tracking-widest text-zinc-300">Drop video or click to upload</p>
+        <p className="mt-2 text-base font-bold tracking-wider text-zinc-600">MP4 / WebM / MOV</p>
       </div>
 
       {/* Upload dialog */}
       {pendingFile && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
           <div className="w-full max-w-lg border-2 border-orange-300 bg-black p-6 shadow-[8px_8px_0_#fdba74]">
-            <h2 className="text-lg font-black uppercase tracking-widest text-orange-300 mb-1">Upload Video</h2>
-            <p className="text-base font-bold uppercase tracking-wider text-zinc-600 mb-6">
+            <h2 className="text-lg font-black tracking-widest text-orange-300 mb-1">Upload Video</h2>
+            <p className="text-base font-bold tracking-wider text-zinc-600 mb-6">
               {pendingFile.name} — {(pendingFile.size / (1024 * 1024)).toFixed(1)} MB
             </p>
 
             {/* Video name */}
-            <label className="block text-base font-black uppercase tracking-widest text-zinc-500 mb-1">
+            <label className="block text-base font-black tracking-widest text-zinc-500 mb-1">
               Name
             </label>
             <input
@@ -160,12 +160,12 @@ export default function VideoUploader() {
               value={videoName}
               onChange={(e) => setVideoName(e.target.value)}
               placeholder="VIDEO NAME"
-              className="w-full border-2 border-zinc-700 bg-black px-4 py-3 text-white font-bold uppercase tracking-wider placeholder-zinc-600 focus:outline-none focus:border-orange-300 mb-4"
+              className="w-full border-2 border-zinc-700 bg-black px-4 py-3 text-white font-bold tracking-wider placeholder-zinc-600 focus:outline-none focus:border-orange-300 mb-4"
               autoFocus
             />
 
             {/* Description with @mentions */}
-            <label className="block text-base font-black uppercase tracking-widest text-zinc-500 mb-1">
+            <label className="block text-base font-black tracking-widest text-zinc-500 mb-1">
               Description
             </label>
             <div className="relative">
@@ -175,7 +175,7 @@ export default function VideoUploader() {
                     <button
                       key={user.id}
                       onClick={() => insertMention(user)}
-                      className={`w-full flex items-center gap-2 px-3 py-2 text-base font-bold uppercase tracking-wider text-left transition-colors ${
+                      className={`w-full flex items-center gap-2 px-3 py-2 text-base font-bold tracking-wider text-left transition-colors ${
                         i === mentionIndex ? 'bg-orange-300 text-black' : 'text-zinc-300 hover:bg-zinc-900'
                       }`}
                     >
@@ -205,14 +205,14 @@ export default function VideoUploader() {
             <div className="mt-6 flex items-center justify-end gap-3">
               <button
                 onClick={handleCancel}
-                className="border border-zinc-700 px-4 py-2 text-base font-bold uppercase tracking-widest text-zinc-400 hover:border-zinc-500 hover:text-white transition-colors"
+                className="border border-zinc-700 px-4 py-2 text-base font-bold tracking-widest text-zinc-400 hover:border-zinc-500 hover:text-white transition-colors"
               >
                 Cancel
               </button>
               <button
                 onClick={handleConfirm}
                 disabled={!videoName.trim() || uploading}
-                className="border-2 border-orange-300 bg-orange-300 px-6 py-2 text-base font-black uppercase tracking-widest text-black hover:bg-orange-300 hover:border-orange-300 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                className="border-2 border-orange-300 bg-orange-300 px-6 py-2 text-base font-black tracking-widest text-black hover:bg-orange-300 hover:border-orange-300 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
               >
                 {uploading ? 'Uploading...' : 'Upload'}
               </button>

@@ -20,7 +20,7 @@ export default function ShareButton({ videoId, currentTime }: Props) {
   return (
     <button
       onClick={handleCopy}
-      className={`flex items-center gap-2 border-2 px-3 py-1 text-base font-black uppercase tracking-widest transition-colors ${
+      className={`flex items-center gap-2 border-2 px-3 py-1 text-base font-black tracking-widest transition-colors ${
         copied
           ? 'border-orange-300 bg-orange-300 text-black'
           : 'border-zinc-700 text-zinc-400 hover:border-orange-300 hover:text-orange-300'

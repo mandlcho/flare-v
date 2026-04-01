@@ -63,7 +63,7 @@ export default function Timeline({ currentTime, duration, annotations, onSeek }:
                 className="h-4 w-1.5 -ml-[3px] border border-black cursor-pointer hover:scale-y-150 transition-transform origin-center"
                 style={{ backgroundColor: ann.author.avatarColor }}
               />
-              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/marker:block whitespace-nowrap border border-orange-300 bg-black px-2 py-1 text-base font-bold uppercase tracking-wider text-orange-300 shadow-[2px_2px_0_#fdba74]">
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/marker:block whitespace-nowrap border border-orange-300 bg-black px-2 py-1 text-base font-bold tracking-wider text-orange-300 shadow-[2px_2px_0_#fdba74]">
                 {ann.author.name} // {formatTime(ann.timestamp)}
               </div>
             </div>
